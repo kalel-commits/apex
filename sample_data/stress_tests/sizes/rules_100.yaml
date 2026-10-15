@@ -1,0 +1,26 @@
+schema_version: 1
+hardware:
+  cabinets: 1
+  ciocs_per_cabinet: 1
+  baseplates_per_cioc: 1
+  charms_per_baseplate: 12
+rules:
+- id: synthetic_spares
+  type: spare_capacity
+  enabled: true
+  level: global
+  basis: available
+  minimum_percent: 5
+compatibility:
+  enabled: true
+  require_charm_type: true
+  require_terminal_block_type: true
+  require_isolation: true
+  require_fusing: true
+  require_injected_power: true
+optimization:
+  preserve_previous_assignments: true
+  move_penalty: 100
+  time_limit_seconds: 30
+  num_search_workers: 1
+  random_seed: 0

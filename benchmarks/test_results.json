@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-10-10T19:42:32Z",
+  "environment": {
+    "os": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.0",
+    "pytest": "8.4.2",
+    "ortools": "9.14.6206",
+    "pandas": "2.3.3",
+    "streamlit": "1.50.0",
+    "openpyxl": "3.1.5",
+    "pyyaml": "6.0.3",
+    "psutil": "7.1.0"
+  },
+  "runs": [
+    {"command": "python -m pytest -q", "result": "passed", "passed": 24, "failed": 0, "skipped": 0, "duration_seconds": 1.71},
+    {"command": "python -m compileall -q app.py src benchmarks scripts", "result": "passed"},
+    {"workflow": "Extract io_signal_sudoku_industry_upgrade.zip into a fresh temporary folder; run pytest and compileall; clean up after path check", "result": "passed", "passed": 24, "failed": 0, "duration_seconds": 1.21},
+    {"command": "python -m streamlit run app.py --server.headless true --server.port 8765; Invoke-WebRequest http://localhost:8765", "result": "passed", "http_status": 200},
+    {"workflow": "sample_data/sample_signals.xlsx -> allocation -> independent validation -> Excel export/reopen", "result": "passed", "input_signals": 6, "solver_status": "OPTIMAL", "allocated": 6, "unallocated": 0, "tqs": 0, "validation_findings": 0, "worksheets": ["IO Allocation", "Technical Queries", "Validation", "Unallocated Signals", "Utilization", "Run Metadata", "Summary"], "workbook_bytes": 9594}
+  ],
+  "fault_injection_assertions": {"passed": 9, "failed": 0, "faults": ["duplicate slot", "invalid hierarchy", "wrong I/O compatibility", "A/B same forbidden CIOC", "group spans cabinets", "cable pair not physically consecutive", "cable pair crosses adjacency boundary", "spare reserve exceeded", "revision tag integrity mismatch"]},
+  "coverage": {"measured": false, "reason": "coverage.py was not installed or invoked"}
+}

@@ -1,0 +1,35 @@
+# Schema 1. Values are illustrative; replace only with verified project/vendor data.
+schema_version: 1
+hardware:
+  cabinets: 3
+  ciocs_per_cabinet: 4
+  baseplates_per_cioc: 8
+  charms_per_baseplate: 12
+rules:
+  - id: global_spares
+    type: spare_capacity
+    enabled: true
+    level: global
+    minimum_percent: 10
+  - id: redundant_channels_separated
+    type: separation
+    enabled: true
+    group_by: redundancy_group
+    side_by: redundancy_side
+    level: cioc
+    severity: hard
+  - id: functional_groups_together
+    type: group_together
+    enabled: true
+    group_by: group
+    level: cabinet
+    severity: hard
+optimization:
+  preserve_previous_assignments: true
+  move_penalty: 100
+  move_costs:
+    unwired: 10
+    wired: 100
+    loop_checked: 500
+    fat_tested: 1000
+  time_limit_seconds: 30

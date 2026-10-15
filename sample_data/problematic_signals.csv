@@ -1,0 +1,4 @@
+Tag,IO,Grp,Redundancy Group,Redundancy Side,Cable,Pair
+BAD-001,UNKNOWN,SKID-1,RED-1,A,CABLE-X,1
+BAD-001,DO,SKID-1,RED-1,B,CABLE-X,two
+,AI,SKID-2,,,CABLE-Y,1

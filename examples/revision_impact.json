@@ -1,0 +1,30 @@
+{
+  "initial_status": "OPTIMAL",
+  "customer_changes": "one added signal; no removals or modifications",
+  "approaches": [
+    {
+      "approach": "fresh_baseline",
+      "status": "OPTIMAL",
+      "runtime_seconds": 0.01758270000027551,
+      "existing_moved": 0,
+      "lifecycle_weighted_move_cost_points": 0.0,
+      "added": 1,
+      "removed": 0,
+      "unallocated": 0,
+      "tqs": 0,
+      "validation_findings": 0
+    },
+    {
+      "approach": "revision_aware",
+      "status": "OPTIMAL",
+      "runtime_seconds": 0.048623499998939224,
+      "existing_moved": 0,
+      "lifecycle_weighted_move_cost_points": 0.0,
+      "added": 1,
+      "removed": 0,
+      "unallocated": 0,
+      "tqs": 0,
+      "validation_findings": 0
+    }
+  ]
+}

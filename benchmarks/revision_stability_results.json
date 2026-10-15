@@ -1,0 +1,133 @@
+{
+  "experiment": "same solver/config/seed; naive has no previous locations; stability-aware receives Revision A locations",
+  "baseline": {
+    "signals": 1000,
+    "status": "OPTIMAL",
+    "runtime_seconds": 6.149945000001026,
+    "allocated": 1000,
+    "tqs": 0,
+    "validation_findings": 0
+  },
+  "results": [
+    {
+      "change_percent": 1,
+      "signals": 1000,
+      "baseline_status": "OPTIMAL",
+      "baseline_runtime_seconds": 6.149945000001026,
+      "approaches": {
+        "naive": {
+          "solver_status": "OPTIMAL",
+          "runtime_seconds": 5.840439300000071,
+          "allocated": 1000,
+          "unallocated": 0,
+          "tqs": 0,
+          "validation_findings": 0,
+          "total_moved": 169,
+          "unchanged_signals_moved": 166,
+          "weighted_move_cost_points": 16900.0,
+          "objective_settings": {
+            "preserve_previous_assignments": true,
+            "move_penalty": 100,
+            "move_costs": {}
+          }
+        },
+        "stability_aware": {
+          "solver_status": "OPTIMAL",
+          "runtime_seconds": 7.035518299999239,
+          "allocated": 1000,
+          "unallocated": 0,
+          "tqs": 0,
+          "validation_findings": 0,
+          "total_moved": 0,
+          "unchanged_signals_moved": 0,
+          "weighted_move_cost_points": 0.0,
+          "objective_settings": {
+            "preserve_previous_assignments": true,
+            "move_penalty": 100,
+            "move_costs": {}
+          }
+        }
+      }
+    },
+    {
+      "change_percent": 5,
+      "signals": 1000,
+      "baseline_status": "OPTIMAL",
+      "baseline_runtime_seconds": 6.149945000001026,
+      "approaches": {
+        "naive": {
+          "solver_status": "OPTIMAL",
+          "runtime_seconds": 5.961545500000284,
+          "allocated": 1000,
+          "unallocated": 0,
+          "tqs": 0,
+          "validation_findings": 0,
+          "total_moved": 555,
+          "unchanged_signals_moved": 534,
+          "weighted_move_cost_points": 55500.0,
+          "objective_settings": {
+            "preserve_previous_assignments": true,
+            "move_penalty": 100,
+            "move_costs": {}
+          }
+        },
+        "stability_aware": {
+          "solver_status": "OPTIMAL",
+          "runtime_seconds": 7.036198200001309,
+          "allocated": 1000,
+          "unallocated": 0,
+          "tqs": 0,
+          "validation_findings": 0,
+          "total_moved": 0,
+          "unchanged_signals_moved": 0,
+          "weighted_move_cost_points": 0.0,
+          "objective_settings": {
+            "preserve_previous_assignments": true,
+            "move_penalty": 100,
+            "move_costs": {}
+          }
+        }
+      }
+    },
+    {
+      "change_percent": 20,
+      "signals": 1000,
+      "baseline_status": "OPTIMAL",
+      "baseline_runtime_seconds": 6.149945000001026,
+      "approaches": {
+        "naive": {
+          "solver_status": "OPTIMAL",
+          "runtime_seconds": 5.752619599999889,
+          "allocated": 1000,
+          "unallocated": 0,
+          "tqs": 0,
+          "validation_findings": 0,
+          "total_moved": 908,
+          "unchanged_signals_moved": 796,
+          "weighted_move_cost_points": 90800.0,
+          "objective_settings": {
+            "preserve_previous_assignments": true,
+            "move_penalty": 100,
+            "move_costs": {}
+          }
+        },
+        "stability_aware": {
+          "solver_status": "OPTIMAL",
+          "runtime_seconds": 6.898059200000716,
+          "allocated": 1000,
+          "unallocated": 0,
+          "tqs": 0,
+          "validation_findings": 0,
+          "total_moved": 0,
+          "unchanged_signals_moved": 0,
+          "weighted_move_cost_points": 0.0,
+          "objective_settings": {
+            "preserve_previous_assignments": true,
+            "move_penalty": 100,
+            "move_costs": {}
+          }
+        }
+      }
+    }
+  ]
+}

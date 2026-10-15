@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "seed": 20261015,
+  "synthetic_assumptions": [
+    "All controller, cabinet, CIOC, baseplate, CHARM and terminal-block IDs are invented test identifiers.",
+    "IO compatibility and isolation/fusing/injected-power facts are fabricated to exercise code paths, not vendor data.",
+    "Each cable has two synthetic signals with pair IDs 1 and 2, mapped to adjacent candidate slots in one baseplate.",
+    "Groups and redundancy labels are artificial; A/B side aliases/engineering meanings are not inferred.",
+    "Reserved and unavailable slots are synthetic status examples only."
+  ],
+  "scenarios": [
+    {
+      "scenario": "size_only",
+      "signals": 100,
+      "seed": 20261015,
+      "physical_slots": 114,
+      "available_slots": 114,
+      "files": [
+        "sizes/signals_100.xlsx",
+        "sizes/inventory_100.json",
+        "sizes/rules_100.yaml"
+      ]
+    },
+    {
+      "scenario": "size_only",
+      "signals": 1000,
+      "seed": 20261015,
+      "physical_slots": 1092,
+      "available_slots": 1092,
+      "files": [
+        "sizes/signals_1000.xlsx",
+        "sizes/inventory_1000.json",
+        "sizes/rules_1000.yaml"
+      ]
+    },
+    {
+      "scenario": "size_only",
+      "signals": 5000,
+      "seed": 20261015,
+      "physical_slots": 5440,
+      "available_slots": 5440,
+      "files": [
+        "sizes/signals_5000.xlsx",
+        "sizes/inventory_5000.json",
+        "sizes/rules_5000.yaml"
+      ]
+    },
+    {
+      "scenario": "size_only",
+      "signals": 10000,
+      "seed": 20261015,
+      "physical_slots": 10874,
+      "available_slots": 10874,
+      "files": [
+        "sizes/signals_10000.xlsx",
+        "sizes/inventory_10000.json",
+        "sizes/rules_10000.yaml"
+      ]
+    },
+    {
+      "scenario": "normal",
+      "signals": 1000,
+      "available_slots": 1092,
+      "physical_slots": 1108,
+      "seed": 20261015,
+      "files": [
+        "normal/signals_1000.xlsx",
+        "normal/inventory.json",
+        "normal/rules.yaml"
+      ]
+    },
+    {
+      "scenario": "high_utilization",
+      "signals": 1000,
+      "available_slots": 1018,
+      "physical_slots": 1034,
+      "seed": 20261015,
+      "files": [
+        "high_utilization/signals_1000.xlsx",
+        "high_utilization/inventory.json",
+        "high_utilization/rules.yaml"
+      ]
+    },
+    {
+      "scenario": "capacity_shortage",
+      "signals": 1000,
+      "available_slots": 950,
+      "physical_slots": 950,
+      "seed": 20261015,
+      "files": [
+        "capacity_shortage/signals_1000.xlsx",
+        "capacity_shortage/inventory.json",
+        "capacity_shortage/rules.yaml"
+      ]
+    },
+    {
+      "scenario": "compatibility_conflicts",
+      "signals": 1000,
+      "available_slots": 1000,
+      "physical_slots": 1000,
+      "seed": 20261015,
+      "files": [
+        "compatibility_conflicts/signals_1000.xlsx",
+        "compatibility_conflicts/inventory.json",
+        "compatibility_conflicts/rules.yaml"
+      ]
+    },
+    {
+      "scenario": "grouping_cable",
+      "signals": 100,
+      "available_slots": 122,
+      "physical_slots": 122,
+      "seed": 20261015,
+      "files": [
+        "grouping_cable/signals_100.xlsx",
+        "grouping_cable/inventory.json",
+        "grouping_cable/rules.yaml"
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "changed_percent_target": 1,
+      "modified": 6,
+      "removed": 2,
+      "added": 2,
+      "unchanged": 992,
+      "signals_A": 1000,
+      "signals_B": 1000,
+      "seed": 20261015,
+      "files": [
+        "revision/revision_A_1000.xlsx",
+        "revision/revision_B_1pct_1000.xlsx"
+      ]
+    },
+    {
+      "changed_percent_target": 5,
+      "modified": 30,
+      "removed": 10,
+      "added": 10,
+      "unchanged": 960,
+      "signals_A": 1000,
+      "signals_B": 1000,
+      "seed": 20261015,
+      "files": [
+        "revision/revision_A_1000.xlsx",
+        "revision/revision_B_5pct_1000.xlsx"
+      ]
+    },
+    {
+      "changed_percent_target": 20,
+      "modified": 120,
+      "removed": 40,
+      "added": 40,
+      "unchanged": 840,
+      "signals_A": 1000,
+      "signals_B": 1000,
+      "seed": 20261015,
+      "files": [
+        "revision/revision_A_1000.xlsx",
+        "revision/revision_B_20pct_1000.xlsx"
+      ]
+    }
+  ],
+  "fixtures": {
+    "messy_input": {
+      "signals": 30,
+      "seed": 20261015,
+      "intended_test": "Alias normalization, shuffled columns, unknown optional column, blank optional values.",
+      "files": [
+        "messy_input/signals_messy.xlsx"
+      ]
+    },
+    "negative_ingestion": {
+      "intended_test": "Missing required tag and ambiguous tag aliases must be rejected.",
+      "files": [
+        "messy_input/invalid_missing_tag.csv",
+        "messy_input/invalid_ambiguous_tag_headers.csv"
+      ]
+    }
+  },
+  "generation_config": "generation_config.json"
+}

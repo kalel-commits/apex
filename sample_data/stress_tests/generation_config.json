@@ -1,0 +1,23 @@
+{
+  "default_signal_count": 1000,
+  "seed": 20261015,
+  "supported_size_files": [
+    100,
+    1000,
+    5000,
+    10000
+  ],
+  "scenario_names": [
+    "normal",
+    "high_utilization",
+    "capacity_shortage",
+    "compatibility_conflicts",
+    "grouping_cable"
+  ],
+  "revision_percentages": [
+    1,
+    5,
+    20
+  ],
+  "generation_script": "benchmarks/generate_demo_data.py"
+}

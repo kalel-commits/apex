@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/io-signal-sudoku/hardware-inventory-v1.schema.json",
+  "title": "IO Signal Sudoku inventory interchange format",
+  "type": "object",
+  "required": ["schema_version", "source_authority", "source_reference", "slots"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source_authority": {"enum": ["synthetic", "customer", "vendor_documented"]},
+    "source_reference": {"type": "string", "minLength": 1},
+    "slots": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["slot_id", "cabinet", "cioc", "baseplate", "charm_slot", "availability", "supported_io_types", "charm_type", "terminal_block_type", "isolation", "fused", "injected_power"],
+        "properties": {
+          "slot_id": {"type": "string", "minLength": 1},
+          "cabinet": {"type": ["string", "integer"]},
+          "cioc": {"type": ["string", "integer"]},
+          "baseplate": {"type": ["string", "integer"]},
+          "charm_slot": {"type": ["string", "integer"]},
+          "terminal_block_id": {"type": ["string", "null"]},
+          "availability": {"enum": ["available", "reserved", "unavailable"]},
+          "supported_io_types": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "charm_type": {"type": ["string", "null"]},
+          "terminal_block_type": {"type": ["string", "null"]},
+          "isolation": {"type": ["boolean", "null"]},
+          "fused": {"type": ["boolean", "null"]},
+          "injected_power": {"type": ["boolean", "null"]},
+          "physical_sequence": {"type": "integer"},
+          "adjacency_domain": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

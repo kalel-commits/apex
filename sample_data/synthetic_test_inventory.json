@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_authority": "synthetic",
+  "source_reference": "IO Signal Sudoku test fixture; not vendor data",
+  "slots": [
+    {"slot_id":"CAB-A/CIOC-1/BP-1/CH-01","cabinet":"CAB-A","cioc":"CAB-A/CIOC-1","baseplate":"CAB-A/CIOC-1/BP-1","charm_slot":"CH-01","terminal_block_id":"TB-A:01","availability":"available","supported_io_types":["AI"],"charm_type":"TEST-AI","terminal_block_type":"TEST-TB-AI","isolation":true,"fused":false,"injected_power":false,"physical_sequence":1,"adjacency_domain":"BP-1"},
+    {"slot_id":"CAB-A/CIOC-1/BP-1/CH-02","cabinet":"CAB-A","cioc":"CAB-A/CIOC-1","baseplate":"CAB-A/CIOC-1/BP-1","charm_slot":"CH-02","terminal_block_id":"TB-A:02","availability":"available","supported_io_types":["AI"],"charm_type":"TEST-AI","terminal_block_type":"TEST-TB-AI","isolation":true,"fused":false,"injected_power":false,"physical_sequence":2,"adjacency_domain":"BP-1"},
+    {"slot_id":"CAB-A/CIOC-1/BP-2/CH-01","cabinet":"CAB-A","cioc":"CAB-A/CIOC-1","baseplate":"CAB-A/CIOC-1/BP-2","charm_slot":"CH-01","terminal_block_id":"TB-A:03","availability":"available","supported_io_types":["DO"],"charm_type":"TEST-DO","terminal_block_type":"TEST-TB-DO","isolation":false,"fused":true,"injected_power":false,"physical_sequence":1,"adjacency_domain":"BP-2"},
+    {"slot_id":"CAB-A/CIOC-1/BP-2/CH-02","cabinet":"CAB-A","cioc":"CAB-A/CIOC-1","baseplate":"CAB-A/CIOC-1/BP-2","charm_slot":"CH-02","terminal_block_id":"TB-A:04","availability":"reserved","supported_io_types":["AI","DO"],"charm_type":"TEST-RESERVED","terminal_block_type":"TEST-TB-RESERVED","isolation":null,"fused":null,"injected_power":null,"physical_sequence":2,"adjacency_domain":"BP-2"}
+  ]
+}
